@@ -21,7 +21,7 @@ public class HeaderTest extends TestBase {
                 .headerContainsUnit(value);
     }
 
-    static Stream<Arguments> miniMenuContainsUnits(){
+    static Stream<Arguments> miniMenuContainsUnits() {
         return Stream.of(
                 Arguments.of(List.of("Магазины", "Сервисные центры", "Для бизнеса", "Оплата и доставка", "Блог"))
         );
@@ -30,7 +30,7 @@ public class HeaderTest extends TestBase {
     @MethodSource
     @ParameterizedTest(name = "Наличие в мини-меню хедера разделов из списка: {0}")
     @Tag("HEADER")
-    public void miniMenuContainsUnits(List<String> values){
+    public void miniMenuContainsUnits(List<String> values) {
         new MacPage()
                 .openPage()
                 .miniMenuContainsUnits(values);

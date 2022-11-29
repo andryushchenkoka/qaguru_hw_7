@@ -49,7 +49,7 @@ public class MacPage {
         return this;
     }
 
-    public MacPage miniMenuContainsUnits(List<String> units){
+    public MacPage miniMenuContainsUnits(List<String> units) {
         headerComponent.findUnitsInMinuMenu(units);
 
         return this;
