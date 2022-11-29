@@ -4,6 +4,8 @@ import com.codeborne.selenide.SelenideElement;
 import pages.components.FooterComponent;
 import pages.components.HeaderComponent;
 
+import java.util.List;
+
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -43,6 +45,12 @@ public class MacPage {
 
     public MacPage acceptFilter() {
         ACCEPT_BUTTON.click();
+
+        return this;
+    }
+
+    public MacPage miniMenuContainsUnits(List<String> units){
+        headerComponent.findUnitsInMinuMenu(units);
 
         return this;
     }
