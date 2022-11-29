@@ -18,6 +18,6 @@ public class FooterTest extends TestBase {
     public void footerContainsUnits(String head, String value) {
         new MacPage()
                 .openPage()
-                .findUnitInFooter(head, value);
+                .footerContainsUnit(head, value);
     }
 }
